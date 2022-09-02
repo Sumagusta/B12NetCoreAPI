@@ -10,6 +10,7 @@ namespace B12NetCoreAPI.Data.Interface.Repositories
     public interface IMahasiswaRepository
     {
         public Task<bool> Create(Mahasiswa model);
+        public Task<List<Mahasiswa>> GetAll();
         
     }
 }

@@ -27,5 +27,12 @@ namespace B12NetCoreAPI.Data.Repositories
                 "(@Id, @Nama, @Alamat, @Usia, @JurusanId)", model);
             return true;
         }
+
+        public async Task<List<Mahasiswa>> GetAll()
+        {
+            var result = await _dbService.GetData<Mahasiswa>("select * from mahasiswa", new {});
+            return result;
+
+        }
     }
 }

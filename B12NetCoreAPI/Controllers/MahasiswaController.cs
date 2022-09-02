@@ -27,5 +27,12 @@ namespace B12NetCoreAPI.Controllers
             var result = await mahasiswaService.Create(model);
             return Ok(result);
         }
+
+        [HttpGet]
+        public async Task<List<Mahasiswa>> GetAll()
+        {
+            var result = await mahasiswaService.GetAll();
+            return result;
+        }
     }
 }

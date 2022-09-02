@@ -23,5 +23,11 @@ namespace B12NetCoreAPI.Service.Services
             var result = await mahasiswaRepository.Create(mahasiswa);
             return result;
         }
+
+        public async Task<List<Mahasiswa>> GetAll()
+        {
+            var result = await mahasiswaRepository.GetAll();
+            return result;
+        }
     }
 }

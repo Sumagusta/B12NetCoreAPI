@@ -10,5 +10,6 @@ namespace B12NetCoreAPI.Service.Interface.Services
     public interface IMahasiswaService
     {
         public Task<bool> Create(Mahasiswa mahasiswa);
+        public Task<List<Mahasiswa>> GetAll();
     }
 }
