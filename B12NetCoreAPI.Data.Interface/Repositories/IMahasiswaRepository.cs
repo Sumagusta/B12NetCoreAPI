@@ -11,6 +11,7 @@ namespace B12NetCoreAPI.Data.Interface.Repositories
     {
         public Task<bool> Create(Mahasiswa model);
         public Task<List<Mahasiswa>> GetAll();
+        public Task<Mahasiswa> Update(Mahasiswa model);
         
     }
 }

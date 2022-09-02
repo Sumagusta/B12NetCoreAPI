@@ -28,11 +28,19 @@ namespace B12NetCoreAPI.Controllers
             return Ok(result);
         }
 
-        [HttpGet]
+        [HttpGet] // [HttpGet("{id:int}")] -> format ini bisa digunakan jika  ingin inputan berasal dari parameter bukan body
         public async Task<List<Mahasiswa>> GetAll()
         {
             var result = await mahasiswaService.GetAll();
             return result;
         }
+
+        [HttpPut]
+        public async Task<IActionResult> Update([FromBody]Mahasiswa model)
+        {
+            var result = await mahasiswaService.Update(model);
+            return Ok(result);
+        }
+
     }
 }

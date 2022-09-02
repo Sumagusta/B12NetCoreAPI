@@ -29,5 +29,11 @@ namespace B12NetCoreAPI.Service.Services
             var result = await mahasiswaRepository.GetAll();
             return result;
         }
+
+        public async Task<Mahasiswa> Update(Mahasiswa model)
+        {
+            var result = await mahasiswaRepository.Update(model);
+            return result;
+        }
     }
 }

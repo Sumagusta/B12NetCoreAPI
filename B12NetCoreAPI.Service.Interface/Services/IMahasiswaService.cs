@@ -11,5 +11,6 @@ namespace B12NetCoreAPI.Service.Interface.Services
     {
         public Task<bool> Create(Mahasiswa mahasiswa);
         public Task<List<Mahasiswa>> GetAll();
+        public Task<Mahasiswa> Update(Mahasiswa model);
     }
 }

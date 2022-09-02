@@ -32,7 +32,14 @@ namespace B12NetCoreAPI.Data.Repositories
         {
             var result = await _dbService.GetData<Mahasiswa>("select * from mahasiswa", new {});
             return result;
+        }
 
+        public async Task<Mahasiswa> Update(Mahasiswa model)
+        {
+            await _dbService.ModifyData("update mahasiswa" +
+                " set nama=@Nama, alamat=@Alamat, usia=@Usia, jurusan_id=@JurusanId " +
+                "where id=@Id", model);
+            return model;
         }
     }
 }
